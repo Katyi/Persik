@@ -27,7 +27,7 @@ const AlbumList = () => {
 
       {/* IMAGES */}
       <div className="grid grid-cols-1 md:grid-cols-2 py-5 px-10 gap-10 justify-items-center">
-        {paginatedImagesList.map((img: any, ind: number) => (
+        {paginatedImagesList.map((img: Img, ind: number) => (
           <div
             key={ind}
             className="flex flex-col items-center bg-white w-[100%] h-fit shadow-md"

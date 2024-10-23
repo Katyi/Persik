@@ -4,7 +4,7 @@ import './globals.css';
 import NavBar from '@/components/Navbar/NavBar';
 import Footer from '@/components/Footer/Footer';
 
-export const comic = Comic_Neue({
+const comic = Comic_Neue({
   subsets: ['latin'],
   variable: '--font-comic',
   weight: ['300', '400', '700'],
@@ -12,7 +12,7 @@ export const comic = Comic_Neue({
   display: 'swap',
 });
 
-export const shantell = Shantell_Sans({
+const shantell = Shantell_Sans({
   subsets: ['cyrillic'],
   variable: '--font-shantell',
   weight: ['300', '400', '700'],
@@ -20,7 +20,7 @@ export const shantell = Shantell_Sans({
   display: 'swap',
 });
 
-export const neucha = Neucha({
+const neucha = Neucha({
   subsets: ['cyrillic'],
   variable: '--font-neucha',
   weight: ['400'],
@@ -41,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${shantell.className} ${neucha.variable} ${comic.variable}`}
+        className={`${shantell.className} ${neucha.variable} ${comic.className}`}
         id="first-section"
       >
         <div>

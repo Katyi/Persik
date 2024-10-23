@@ -1,11 +1,4 @@
 import Image from 'next/image';
-import { Dispatch, SetStateAction } from 'react';
-
-interface PaginationProps1 {
-  currentPage: number;
-  setCurrentPage: Dispatch<SetStateAction<number>>;
-  numberOfPages: number;
-}
 
 const Pagination = ({
   currentPage,
@@ -14,13 +7,13 @@ const Pagination = ({
 }: PaginationProps1) => {
   function nextPage() {
     if (currentPage != numberOfPages) {
-      setCurrentPage((prev) => prev + 1);
+      setCurrentPage((prev: number) => prev + 1);
     }
   }
 
   function prevPage() {
     if (currentPage != 1) {
-      setCurrentPage((prev) => prev - 1);
+      setCurrentPage((prev: number) => prev - 1);
     }
   }
 
@@ -31,15 +24,6 @@ const Pagination = ({
   return (
     <div className="w-full flex flex-row items-center justify-center">
       <div className="flex flex-row items-center gap-4">
-        {/* <span
-          className={`${
-            currentPage === 1 && 'hidden'
-          } cursor-pointer font-semibold hidden sm:block`}
-          onClick={() => prevPage()}
-        >
-          prev
-        </span> */}
-
         <Image
           src="/left.png"
           alt="left"
@@ -104,15 +88,6 @@ const Pagination = ({
             {numberOfPages}
           </span>
         </div>
-        {/* <span
-          className={`${
-            currentPage === numberOfPages && 'hidden'
-          } cursor-pointer font-semibold`}
-          onClick={() => nextPage()}
-        >
-          next
-        </span> */}
-
         <Image
           src="/right.png"
           alt="left"
