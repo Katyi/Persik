@@ -3,25 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-comic: 'Comic Neue';
+  --font-shantel: 'Ruda', 'Neucha';
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.comic {
+  font-family: var(--font-comic);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.shantell {
+  font-family: var(--font-shantell);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.neucha {
+  font-family: var(--font-neucha);
 }
