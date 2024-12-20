@@ -3,6 +3,7 @@ import { Comic_Neue, Shantell_Sans, Neucha } from 'next/font/google';
 import './globals.css';
 import NavBar from '@/components/Navbar/NavBar';
 import Footer from '@/components/Footer/Footer';
+import Script from 'next/script';
 
 const comic = Comic_Neue({
   subsets: ['latin'],
@@ -45,6 +46,8 @@ export default function RootLayout({
         id="first-section"
       >
         <div>
+          {/* <script src="/vendor/snow.js" defer /> */}
+          <Script src="/vendor/snow.js" defer />
           <NavBar />
           {children}
           <Footer />
